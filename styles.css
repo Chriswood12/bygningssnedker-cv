@@ -1039,7 +1039,7 @@ button {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.14);
 }
 
-.contact-row:last-of-type {
+.contact-row:has(+ .contact-cta-row) {
   padding-bottom: 0;
   border-bottom: 0;
 }
@@ -1061,7 +1061,7 @@ button {
   word-break: break-word;
 }
 
-.contact-row-value:hover {
+a.contact-row-value:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
