@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#254436"/>
+  <rect x="7" y="7" width="50" height="50" rx="7" stroke="#C89F7B" stroke-width="2.5"/>
+  <path d="M18 42V22h8.5c5.2 0 8.5 3.1 8.5 7.5S31.7 37 26.5 37H22v5h-4zm4-8.5h4.2c2.8 0 4.6-1.5 4.6-4s-1.8-4-4.6-4H22v8z" fill="#F7F5F0" opacity="0"/>
+  <text x="32" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" letter-spacing="1" fill="#F7F5F0">CW</text>
+</svg>
