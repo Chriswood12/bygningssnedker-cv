@@ -18,14 +18,14 @@ En hurtig, ren og mobilvenlig CV-hjemmeside til ansøgning om læreplads som **b
 
 ## Billeder i `images/`
 
-Værksteds- og montagebillederne ligger i fuld web-opløsning i `images/` (uden EXIF/GPS-data):
+Alle billeder ligger i skarp web-opløsning i `images/` (uden EXIF/GPS-data):
 
+- `images/portrait.jpg` — Portrætbillede ved formatsav på værksted
 - `images/vaerksted-doer.jpg` — Opbygning & tilpasning på værkstedet (sortmalet lamel- og dørkonstruktion)
 - `images/reoler-trae.jpg` — Reoler i træ med korkbagplade under samling
 - `images/reol-faerdig.jpg` — Færdig egetræsreol monteret på væg
 - `images/lamel-opspaending.jpg` — Lamelarbejde & opspænding ved høvlebænken
 - `images/montage-fuge.jpg` — Montage- & fugearbejde ved trægulv, fodpaneler og fransk glasdør
-- `images/portrait.jpg` — Portrætbillede (kan udskiftes med original i højere opløsning med samme filnavn)
 
 ## Tilpas tekst, adresse eller datoer
 
