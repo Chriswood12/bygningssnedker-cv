@@ -797,6 +797,101 @@ button {
   color: var(--ink-secondary);
 }
 
+/* Videoklip fra værkstedet (9:16 vertikal afspiller uden sorte kanter) */
+.video-subsection {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.subsection-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.subsection-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.video-card {
+  display: grid;
+  grid-template-columns: 205px minmax(0, 1fr);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.video-card:hover {
+  border-color: var(--oak-line);
+  box-shadow: var(--shadow-md);
+}
+
+.video-media {
+  background: hsl(36, 12%, 11%);
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: hsl(36, 12%, 11%);
+}
+
+.video-card-body {
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--border);
+}
+
+.video-card-body h4 {
+  margin: 0 0 8px;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink-primary);
+}
+
+.video-card-body p {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+}
+
+.video-meta-note {
+  margin: 0 !important;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 0.84rem !important;
+  color: var(--ink-secondary);
+}
+
+.video-meta-note strong {
+  color: var(--ink-primary);
+}
+
 /* ==========================================================================
    Erhvervserfaring & Uddannelse
    ========================================================================== */
@@ -1184,6 +1279,10 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
   .exp-item,
   .edu-card {
     grid-template-columns: 1fr;
@@ -1264,6 +1363,26 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .subsection-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .video-card {
+    grid-template-columns: 1fr;
+  }
+
+  .video-media {
+    max-height: 460px;
+    aspect-ratio: 9 / 14;
+  }
+
+  .video-card-body {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding: 18px;
+  }
+
   .profile-prose,
   .profile-aside,
   .contact-card {
@@ -1309,6 +1428,7 @@ button {
   .contact-cta-row,
   .section-note,
   .footer-top-link,
+  .video-subsection,
   #kontakt,
   .lightbox,
   .toast,

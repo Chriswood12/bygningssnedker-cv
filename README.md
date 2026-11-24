@@ -27,6 +27,7 @@ Alle billeder ligger i skarp web-opløsning i `images/` (uden EXIF/GPS-data):
 - `images/limning-opspaending.jpg` — Limning & opspænding i massivtræ på samlebordet
 - `images/lamel-opspaending.jpg` — Lamelarbejde & opspænding ved høvlebænken
 - `images/montage-fuge.jpg` — Montage- & fugearbejde ved trægulv, fodpaneler og fransk glasdør
+- `images/video-oliering-poster.jpg` & `images/video-cnc-poster.jpg` — Forhåndsbilleder til de 2 værkstedsvideoer (selve `.mp4`-filerne streames direkte fra **Vercel Blob**)
 
 ## Tilpas tekst, adresse eller datoer
 

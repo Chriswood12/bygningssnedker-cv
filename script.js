@@ -183,4 +183,16 @@
       renderLightboxAt(currentIndex + 1);
     }
   });
+
+  // Sæt øvrige videoer på pause, når en ny video startes
+  const videos = Array.from(document.querySelectorAll("video"));
+  videos.forEach((video) => {
+    video.addEventListener("play", () => {
+      videos.forEach((other) => {
+        if (other !== video && !other.paused) {
+          other.pause();
+        }
+      });
+    });
+  });
 })();
