@@ -184,10 +184,18 @@
     }
   });
 
-  // Sæt øvrige videoer på pause, når en ny video startes
+  // Hold videoerne lydløse og sæt øvrige videoer på pause, når en ny video startes
   const videos = Array.from(document.querySelectorAll("video"));
   videos.forEach((video) => {
+    const forceMute = () => {
+      if (!video.muted) video.muted = true;
+      if (video.volume !== 0) video.volume = 0;
+    };
+
+    forceMute();
+    video.addEventListener("volumechange", forceMute);
     video.addEventListener("play", () => {
+      forceMute();
       videos.forEach((other) => {
         if (other !== video && !other.paused) {
           other.pause();
