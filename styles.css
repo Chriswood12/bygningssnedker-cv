@@ -747,6 +747,14 @@ button {
   gap: 18px;
 }
 
+.work-grid--pair {
+  margin-bottom: 18px;
+}
+
+.work-grid--triple {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .work-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
@@ -765,6 +773,10 @@ button {
 
 .work-card .work-photo-btn {
   aspect-ratio: 4 / 4.2;
+}
+
+.work-grid--triple .work-card .work-photo-btn {
+  aspect-ratio: 3 / 4;
 }
 
 .work-card-body {
@@ -1247,7 +1259,8 @@ button {
 
   .facts-bar,
   .strengths-grid,
-  .work-grid {
+  .work-grid,
+  .work-grid--triple {
     grid-template-columns: 1fr;
   }
 
@@ -1513,24 +1526,36 @@ button {
 
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8pt;
+    gap: 7pt;
+  }
+
+  .work-grid--pair {
+    margin-bottom: 7pt;
+  }
+
+  .work-grid--triple {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .work-card .work-photo-btn {
-    aspect-ratio: 4 / 3.1;
+    aspect-ratio: 16 / 10;
+  }
+
+  .work-grid--triple .work-card .work-photo-btn {
+    aspect-ratio: 4 / 3.2;
   }
 
   .work-card-body {
-    padding: 7pt 9pt;
+    padding: 6pt 8pt;
   }
 
   .work-card-body h3 {
-    font-size: 9.2pt;
-    margin-bottom: 3pt;
+    font-size: 8.8pt;
+    margin-bottom: 2pt;
   }
 
   .work-card-body p {
-    font-size: 8pt;
+    font-size: 7.7pt;
   }
 
   #erfaring {

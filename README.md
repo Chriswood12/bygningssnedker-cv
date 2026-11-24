@@ -24,6 +24,7 @@ Alle billeder ligger i skarp web-opløsning i `images/` (uden EXIF/GPS-data):
 - `images/vaerksted-doer.jpg` — Opbygning & tilpasning på værkstedet (sortmalet lamel- og dørkonstruktion)
 - `images/reoler-trae.jpg` — Reoler i træ med korkbagplade under samling
 - `images/reol-faerdig.jpg` — Færdig egetræsreol monteret på væg
+- `images/limning-opspaending.jpg` — Limning & opspænding i massivtræ på samlebordet
 - `images/lamel-opspaending.jpg` — Lamelarbejde & opspænding ved høvlebænken
 - `images/montage-fuge.jpg` — Montage- & fugearbejde ved trægulv, fodpaneler og fransk glasdør
 
