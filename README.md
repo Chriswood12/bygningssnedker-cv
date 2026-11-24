@@ -16,15 +16,16 @@ En hurtig, ren og mobilvenlig CV-hjemmeside til ansøgning om læreplads som **b
 3. Lad indstillingerne stå som standard (**Framework Preset: Other**, **Root Directory: `./`**) og klik **Deploy**.
 4. Hver gang du opdaterer filer i GitHub, opdaterer Vercel siden automatisk.
 
-## Udskift billeder til fuld opløsning
+## Billeder i `images/`
 
-Billederne ligger i mappen `images/` og kan udskiftes direkte med dine originale billeder i fuld opløsning (behold blot filnavnene):
+Værksteds- og montagebillederne ligger i fuld web-opløsning i `images/` (uden EXIF/GPS-data):
 
-- `images/portrait.jpg` — Portrætbillede
 - `images/vaerksted-doer.jpg` — Opbygning & tilpasning på værkstedet (sortmalet lamel- og dørkonstruktion)
-- `images/reoler-trae.jpg` — Reoler i træ med korkbagplade
+- `images/reoler-trae.jpg` — Reoler i træ med korkbagplade under samling
+- `images/reol-faerdig.jpg` — Færdig egetræsreol monteret på væg
 - `images/lamel-opspaending.jpg` — Lamelarbejde & opspænding ved høvlebænken
 - `images/montage-fuge.jpg` — Montage- & fugearbejde ved trægulv, fodpaneler og fransk glasdør
+- `images/portrait.jpg` — Portrætbillede (kan udskiftes med original i højere opløsning med samme filnavn)
 
 ## Tilpas tekst, adresse eller datoer
 

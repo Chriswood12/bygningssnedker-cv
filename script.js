@@ -99,26 +99,36 @@
     sections.forEach((sec) => observer.observe(sec));
   }
 
-  // Lightbox til værksteds- og montagebilleder
+  // Lightbox til værksteds- og montagebilleder (inkl. Forrige/Næste og piletaster)
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const lightboxTitle = document.getElementById("lightbox-title");
   const lightboxCaption = document.getElementById("lightbox-caption");
   const lightboxClose = document.getElementById("lightbox-close");
+  const lightboxPrev = document.getElementById("lightbox-prev");
+  const lightboxNext = document.getElementById("lightbox-next");
+  const galleryTriggers = Array.from(document.querySelectorAll("[data-lightbox]"));
+  let currentIndex = -1;
   let lastTrigger = null;
 
-  function openLightbox(trigger) {
-    if (!lightbox || !lightboxImg || !lightboxTitle || !lightboxCaption) return;
-    lastTrigger = trigger;
+  function renderLightboxAt(index) {
+    if (!galleryTriggers.length || !lightboxImg || !lightboxTitle || !lightboxCaption) return;
+    currentIndex = (index + galleryTriggers.length) % galleryTriggers.length;
+    const trigger = galleryTriggers[currentIndex];
     const src = trigger.getAttribute("data-src") || "";
     const title = trigger.getAttribute("data-title") || "";
     const caption = trigger.getAttribute("data-caption") || "";
 
     lightboxImg.src = src;
     lightboxImg.alt = caption || title;
-    lightboxTitle.textContent = title;
+    lightboxTitle.textContent = `${title} (${currentIndex + 1}/${galleryTriggers.length})`;
     lightboxCaption.textContent = caption;
+  }
 
+  function openLightbox(index) {
+    if (!lightbox) return;
+    lastTrigger = galleryTriggers[index] || null;
+    renderLightboxAt(index);
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -139,9 +149,17 @@
     }
   }
 
-  document.querySelectorAll("[data-lightbox]").forEach((btn) => {
-    btn.addEventListener("click", () => openLightbox(btn));
+  galleryTriggers.forEach((btn, idx) => {
+    btn.addEventListener("click", () => openLightbox(idx));
   });
+
+  if (lightboxPrev) {
+    lightboxPrev.addEventListener("click", () => renderLightboxAt(currentIndex - 1));
+  }
+
+  if (lightboxNext) {
+    lightboxNext.addEventListener("click", () => renderLightboxAt(currentIndex + 1));
+  }
 
   if (lightboxClose) {
     lightboxClose.addEventListener("click", closeLightbox);
@@ -156,8 +174,13 @@
   }
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && lightbox && lightbox.classList.contains("is-open")) {
+    if (!lightbox || !lightbox.classList.contains("is-open")) return;
+    if (event.key === "Escape") {
       closeLightbox();
+    } else if (event.key === "ArrowLeft") {
+      renderLightboxAt(currentIndex - 1);
+    } else if (event.key === "ArrowRight") {
+      renderLightboxAt(currentIndex + 1);
     }
   });
 })();

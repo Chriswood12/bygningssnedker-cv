@@ -743,7 +743,7 @@ button {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -764,7 +764,7 @@ button {
 }
 
 .work-card .work-photo-btn {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 4.2;
 }
 
 .work-card-body {
@@ -1065,16 +1065,25 @@ button {
   font-weight: 700;
 }
 
+.lightbox-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lightbox-nav,
 .lightbox-close {
   border: 1px solid var(--border-strong);
   background: var(--bg-surface);
   color: var(--ink-primary);
   border-radius: var(--radius-sm);
-  padding: 6px 12px;
-  font-size: 0.85rem;
+  padding: 6px 11px;
+  font-size: 0.82rem;
   font-weight: 600;
+  transition: background-color var(--transition);
 }
 
+.lightbox-nav:hover,
 .lightbox-close:hover {
   background: var(--bg-tint);
 }
@@ -1469,34 +1478,59 @@ button {
   }
 
   .gallery-intro {
-    margin: 0 0 10pt;
-    font-size: 9pt;
+    margin: 0 0 7pt;
+    font-size: 8.6pt;
   }
 
   .work-featured {
-    grid-template-columns: 1.25fr 1fr;
-    margin-bottom: 10pt;
+    grid-template-columns: 1.15fr 1fr;
+    margin-bottom: 8pt;
+  }
+
+  .work-featured .work-photo-btn {
+    aspect-ratio: 16 / 10;
   }
 
   .work-featured-body {
-    padding: 12pt 14pt;
+    padding: 10pt 12pt;
+  }
+
+  .work-featured-body h3 {
+    font-size: 10.5pt;
+    margin-bottom: 5pt;
+  }
+
+  .work-featured-body p {
+    font-size: 8.4pt;
+    margin-bottom: 8pt;
+  }
+
+  .work-specs {
+    padding-top: 8pt;
+    font-size: 8pt;
+    gap: 3pt;
   }
 
   .work-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 8pt;
   }
 
   .work-card .work-photo-btn {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 3.1;
   }
 
   .work-card-body {
-    padding: 9pt 10pt;
+    padding: 7pt 9pt;
+  }
+
+  .work-card-body h3 {
+    font-size: 9.2pt;
+    margin-bottom: 3pt;
   }
 
   .work-card-body p {
-    font-size: 8.5pt;
+    font-size: 8pt;
   }
 
   #erfaring {

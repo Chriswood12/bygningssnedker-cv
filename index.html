@@ -297,8 +297,8 @@
               <img
                 src="./images/vaerksted-doer.jpg"
                 alt="Sortmalet lamel- og dørkonstruktion under klargøring og udmåling med afstandsklodser på snedkerværksted"
-                width="512"
-                height="384"
+                width="1024"
+                height="768"
                 loading="lazy"
               />
               <span class="photo-zoom-hint" aria-hidden="true">Vis større</span>
@@ -318,7 +318,7 @@
             </div>
           </article>
 
-          <!-- 3 øvrige eksempler -->
+          <!-- 4 øvrige eksempler (2x2) -->
           <div class="work-grid">
             <article class="work-card">
               <button
@@ -326,22 +326,55 @@
                 class="work-photo-btn"
                 data-lightbox
                 data-src="./images/reoler-trae.jpg"
-                data-title="Reoler i træ"
-                data-caption="To ens ruminddelte træreoler med korkbagplade under samling på værkstedsbordet."
-                aria-label="Forstør billede: Reoler i træ"
+                data-title="Reoler i træ — under samling"
+                data-caption="To ens ruminddelte egetræsreoler med geringssamlinger og korkbagplade under samling på værkstedsbordet."
+                aria-label="Forstør billede: Reoler i træ under samling"
               >
                 <img
                   src="./images/reoler-trae.jpg"
-                  alt="To ens ruminddelte træreoler med korkbagplade under samling på værkstedsbordet"
-                  width="186"
-                  height="249"
+                  alt="To ens ruminddelte egetræsreoler med korkbagplade under samling på værkstedsbordet"
+                  width="768"
+                  height="1024"
+                  style="object-position: center 54%;"
                   loading="lazy"
                 />
                 <span class="photo-zoom-hint" aria-hidden="true">Vis større</span>
               </button>
               <div class="work-card-body">
-                <h3>Reoler i træ</h3>
-                <p>To ens ruminddelte træreoler med korkbagplade under samling på værkstedsbordet.</p>
+                <h3>Reoler i træ — under samling</h3>
+                <p>
+                  To ens ruminddelte egetræsreoler med geringssamlinger og korkbagplade under
+                  samling på værkstedsbordet.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-card">
+              <button
+                type="button"
+                class="work-photo-btn"
+                data-lightbox
+                data-src="./images/reol-faerdig.jpg"
+                data-title="Færdig træreol — monteret på væg"
+                data-caption="Færdig egetræsreol med ruminddeling, korkbagplade og præcise geringssamlinger monteret på væg."
+                aria-label="Forstør billede: Færdig træreol monteret på væg"
+              >
+                <img
+                  src="./images/reol-faerdig.jpg"
+                  alt="Færdig egetræsreol med ruminddeling og korkbagplade monteret på væg"
+                  width="768"
+                  height="1024"
+                  style="object-position: center 45%;"
+                  loading="lazy"
+                />
+                <span class="photo-zoom-hint" aria-hidden="true">Vis større</span>
+              </button>
+              <div class="work-card-body">
+                <h3>Færdig træreol — monteret på væg</h3>
+                <p>
+                  Færdig egetræsreol med ruminddeling, korkbagplade og præcise geringssamlinger
+                  monteret på væg.
+                </p>
               </div>
             </article>
 
@@ -352,21 +385,25 @@
                 data-lightbox
                 data-src="./images/lamel-opspaending.jpg"
                 data-title="Lamelarbejde &amp; opspænding"
-                data-caption="Samling, fastspænding med skruetvinger og finisharbejde ved høvlebænken."
+                data-caption="Samling, fastspænding med skruetvinger og finisharbejde på sortmalet lamelkonstruktion ved høvlebænken."
                 aria-label="Forstør billede: Lamelarbejde og opspænding"
               >
                 <img
                   src="./images/lamel-opspaending.jpg"
-                  alt="Lamelkonstruktion fastspændt med skruetvinger ved høvlebænken"
-                  width="189"
-                  height="249"
+                  alt="Sortmalet lamelkonstruktion fastspændt med skruetvinger ved høvlebænken"
+                  width="768"
+                  height="1024"
+                  style="object-position: center 65%;"
                   loading="lazy"
                 />
                 <span class="photo-zoom-hint" aria-hidden="true">Vis større</span>
               </button>
               <div class="work-card-body">
                 <h3>Lamelarbejde &amp; opspænding</h3>
-                <p>Samling, fastspænding med skruetvinger og finisharbejde ved høvlebænken.</p>
+                <p>
+                  Samling, fastspænding med skruetvinger og finisharbejde på sortmalet
+                  lamelkonstruktion ved høvlebænken.
+                </p>
               </div>
             </article>
 
@@ -383,8 +420,9 @@
                 <img
                   src="./images/montage-fuge.jpg"
                   alt="Afsluttende finish- og fugearbejde ved trægulv, fodpaneler og fransk glasdør"
-                  width="189"
-                  height="249"
+                  width="768"
+                  height="1024"
+                  style="object-position: center 45%;"
                   loading="lazy"
                 />
                 <span class="photo-zoom-hint" aria-hidden="true">Vis større</span>
@@ -630,9 +668,17 @@
       <div class="lightbox-dialog">
         <div class="lightbox-top">
           <h3 class="lightbox-title" id="lightbox-title">Billede</h3>
-          <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Luk billede">
-            Luk (Esc)
-          </button>
+          <div class="lightbox-controls">
+            <button type="button" class="lightbox-nav" id="lightbox-prev" aria-label="Forrige billede">
+              ← Forrige
+            </button>
+            <button type="button" class="lightbox-nav" id="lightbox-next" aria-label="Næste billede">
+              Næste →
+            </button>
+            <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Luk billede">
+              Luk (Esc)
+            </button>
+          </div>
         </div>
         <div class="lightbox-media">
           <img id="lightbox-img" alt="" />
